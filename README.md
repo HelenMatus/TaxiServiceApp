@@ -1,8 +1,7 @@
 # 🚖 Taxi Service App
 This project is the implementation of a taxi service using technologies Java Servlets and SQL.
 ## Features
-- Login as driver
-- Logout
+- Registration and Authentication
 - Add, delete and display cars
 - Add, delete and display drivers
 - Add, delete and display manufacturers
@@ -21,5 +20,82 @@ This project is the implementation of a taxi service using technologies Java Ser
 - Use your data for DB setup (taxi/util/ConnectionUtil.java
 - Build project with Maven
 - Deploy the war file
+## Project Structure
+- taxi
+  - Controller
+    - car
+      - AddCarController
+      - AddDriverToCarController
+      - DeleteCarController
+      - DeleteDriverFromCarController
+      - GetAllCarsController
+    - driver
+      - AddDriverController
+      - DeleteDriverController
+      - GetAllDriversController
+      - GetMyCurrentCarsController
+    - manufacturer
+      - AddManufacturerController
+      - DeleteManufacturerController
+      - GetAllManufacturersController
+    - IndexController
+    - LoginController
+    - LogoutController
+  - Dao
+    - CarDao
+    - CarDaoImpl
+    - DriverDao
+    - DriverDaoImpl
+    - GenericDao
+    - ManufacturerDao
+    - ManufacturerDaoImpl
+  - Exception
+    - AuthenticationException
+    - DataProcessingException
+  - Filter
+    - AuthenticationFilter
+  - Lib
+    - Dao
+    - Inject
+    - Injector
+    - Service
+  - Model
+    - Car
+    - Driver
+    - Manufacturer
+  - Service
+    - AuthenticationService
+    - AuthenticationServiceImpl
+    - CarService
+    - CarServiceImpl
+    - DriverService
+    - DriverServiceImpl
+    - GenericService
+    - ManufacturerService
+    - ManufacturerServiceImpl
+  - Util
+    - ConnectionUtil
+- Resources
+  - init_db.sql
+- WebApp
+  - WEB-INF
+    - Views
+      - cars
+        - drivers
+          - add.jsp
+        - add.jsp
+        - all.jsp
+      - css
+        - style.css
+      - drivers
+        - add.jsp
+        - all.jsp
+      - manufacturers
+        - add.jsp
+        - all.jsp
+      - header.jsp
+      - index.jsp
+      - login.jsp
+    - web.xml
 ## Authors
 [Helen Matus](https://github.com/HelenMatus)
