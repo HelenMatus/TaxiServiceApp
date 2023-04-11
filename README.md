@@ -1,4 +1,4 @@
-# Taxi Service App
+# 🚖 Taxi Service App
 This project is the implementation of a taxi service using technologies Java Servlets and SQL.
 ## Features
 - Login as driver
